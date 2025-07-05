@@ -1,15 +1,17 @@
 import pic from "../assets/peepo.webp";
+import { ColorModeSwitch } from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
     <>
-      <div className="flex items-center space-x-4">
-        <div className="w-24 h-24 rounded-2x1 overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-2 w-full">
+        <div className="w-20 h-20 rounded-2xl overflow-hidden mt-1">
           <img src={pic} alt="Avatar" className="w-full h-full object-cover" />
         </div>
-        <h1 className="text-2xl font-bold self-center">NavBar</h1>
+        <ColorModeSwitch />
       </div>
 
+      {/*this is all my tab stuff here*/}
       <div
         role="tablist"
         className="tabs tabs-boxed w-full max-w-screen mx-auto"
@@ -17,7 +19,7 @@ const NavBar = () => {
         <a role="tab" className="tab flex-1 text-center">
           Tab 1
         </a>
-        <a role="tab" className="tab  flex-1 text-center">
+        <a role="tab" className="tab flex-1 text-center">
           Tab 2
         </a>
       </div>
