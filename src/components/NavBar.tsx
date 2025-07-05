@@ -10,19 +10,6 @@ const NavBar = () => {
         </div>
         <ColorModeSwitch />
       </div>
-
-      {/*this is all my tab stuff here*/}
-      <div
-        role="tablist"
-        className="tabs tabs-boxed w-full max-w-screen mx-auto"
-      >
-        <a role="tab" className="tab flex-1 text-center">
-          Tab 1
-        </a>
-        <a role="tab" className="tab flex-1 text-center">
-          Tab 2
-        </a>
-      </div>
     </>
   );
 };
