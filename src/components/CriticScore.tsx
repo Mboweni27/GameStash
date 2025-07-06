@@ -3,6 +3,7 @@ interface Props {
 }
 
 const CriticScore = ({ score }: Props) => {
+  if (!score || score === 0) return null;
   let color =
     score > 75
       ? "accent"

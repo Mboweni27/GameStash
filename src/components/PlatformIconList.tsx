@@ -33,6 +33,10 @@ const PlatformIconList = ({ platforms }: Props) => {
     <div className="flex items-center space-x-2 my-4">
       {platforms.map((platform) => {
         const Icon = iconMap[platform.slug];
+        if (!Icon) {
+          console.log("Unknown slug:", platform.slug);
+          return null;
+        }
         return <Icon key={platform.slug} className="text-xl text-gray-500" />;
       })}
     </div>
