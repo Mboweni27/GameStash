@@ -3,7 +3,7 @@ import React from "react";
 const GameCardSkeleton = () => {
   //might need to change the height in the future h-69
   return (
-    <div className="card bg-base-200 shadow-md rounded-box overflow-hidden border border-base-700 animate-pulse">
+    <div>
       <figure>
         <div className="block w-200 h-69 bg-base-300 rounded-t-md"></div>
       </figure>
