@@ -1,6 +1,7 @@
 import React from "react";
 import type { Game } from "../hooks/useGames";
 import PlatfromIconList from "./PlatformIconList";
+import getCroppedImageUrl from "../services/image-url";
 
 interface Props {
   game: Game;
@@ -10,7 +11,7 @@ const GameCard = ({ game }: Props) => {
     <div className="card bg-base-200 shadow-md rounded-box overflow-hidden border border-base-700">
       <figure>
         <img
-          src={game.background_image}
+          src={getCroppedImageUrl(game.background_image)}
           alt={game.name}
           className="w-full h-48 object-cover"
         />
