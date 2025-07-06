@@ -1,11 +1,11 @@
 import React from "react";
 import type { Game } from "../hooks/useGames";
+import PlatfromIconList from "./PlatformIconList";
 
 interface Props {
   game: Game;
 }
 const GameCard = ({ game }: Props) => {
-  console.log(game.background_image);
   return (
     <div className="card bg-base-200 shadow-md rounded-box overflow-hidden border border-base-700">
       <figure>
@@ -17,6 +17,9 @@ const GameCard = ({ game }: Props) => {
       </figure>
       <div className="card-body">
         <h1 className="card-title">{game.name}</h1>
+        <PlatfromIconList
+          platforms={game.parent_platforms.map((p) => p.platform)}
+        />
       </div>
     </div>
   );
