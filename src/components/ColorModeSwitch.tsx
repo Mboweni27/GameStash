@@ -3,12 +3,12 @@ import React from "react";
 export const ColorModeSwitch = () => {
   return (
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn m-1">
+      <div tabIndex={0} role="button" className="btn btn-primary m-2">
         Theme
         <svg
           width="12px"
           height="12px"
-          className="inline-block h-2 w-2 fill-current opacity-70"
+          className="inline-block h-2 w-2 fill-current opacity-700"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 2048 2048"
         >

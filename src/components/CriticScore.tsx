@@ -6,7 +6,7 @@ const CriticScore = ({ score }: Props) => {
   if (!score || score === 0) return null;
   let color =
     score > 75
-      ? "accent"
+      ? "primary"
       : score > 60
       ? "bg-yellow-500 text-yellow-500"
       : "error";
