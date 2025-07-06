@@ -7,16 +7,15 @@ function App() {
     <>
       <NavBar />
       {/*this is all my tab stuff here*/}
-      <div
-        role="tablist"
-        className="tabs tabs-boxed w-full max-w-screen mx-auto"
-      >
-        <a role="tab" className="tab flex-1 text-center">
+      <div className="flex p-5 gap-4">
+        {/* Sidebar: Genre List */}
+        <div className="hidden md:block w-1/4">
           <GenreList />
-        </a>
-        <a role="tab" className="tab flex-1 text-center">
+        </div>
+
+        <div className="w-full md:w-3/4">
           <GameGrid />
-        </a>
+        </div>
       </div>
     </>
   );
