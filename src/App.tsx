@@ -1,5 +1,6 @@
 import "./App.css";
 import GameGrid from "./components/GameGrid";
+import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         className="tabs tabs-boxed w-full max-w-screen mx-auto"
       >
         <a role="tab" className="tab flex-1 text-center">
-          Tab 1
+          <GenreList />
         </a>
         <a role="tab" className="tab flex-1 text-center">
           <GameGrid />
