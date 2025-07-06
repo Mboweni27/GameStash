@@ -7,11 +7,14 @@ interface Props {
   onSelectGenre: (genre: Genre) => void;
 }
 const GenreList = ({ onSelectGenre }: Props) => {
-  const { genres } = useGenres();
+  //this is where ill be adding my spinner, but its not working for some reason
+  const { data, isLoading, error } = useGenres();
+  if (error) return null;
+  if (isLoading) return <span className="loading loading-spinner loading-xl" />;
   return (
     <>
       <ul className="space-y-4">
-        {genres.map((genre) => (
+        {data.map((genre) => (
           <li key={genre.id}>
             <button
               onClick={() => onSelectGenre(genre)}
