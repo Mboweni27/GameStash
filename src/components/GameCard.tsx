@@ -14,7 +14,7 @@ const GameCard = ({ game }: Props) => {
         <img
           src={getCroppedImageUrl(game.background_image)}
           alt={game.name}
-          className="w-full h-47 object-cover"
+          className="w-full h-full object-cover"
         />
       </figure>
       <div className="card-body grid grid-rows-[auto_auto_auto] gap-3">
