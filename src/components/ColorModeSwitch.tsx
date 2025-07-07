@@ -1,5 +1,3 @@
-import React from "react";
-
 export const ColorModeSwitch = () => {
   return (
     <div className="dropdown">

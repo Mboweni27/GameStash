@@ -1,4 +1,3 @@
-import React from "react";
 import butterfly from "../assets/butterflymbobo.webp";
 import knifeDog from "../assets/dogKnife.webp";
 import monkey from "../assets/surprisedMonkey.webp";

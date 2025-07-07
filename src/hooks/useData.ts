@@ -1,4 +1,3 @@
-import React from 'react'
 import { CanceledError} from "axios"
 import type {AxiosRequestConfig} from "axios"
 import apiClient from '../services/api-client'

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import usePlatforms from "../hooks/usePlatforms";
 import type { Platform } from "../hooks/useGames";
 
@@ -17,7 +17,6 @@ const PlatformSelector = ({ onSelectedPlatform, selectedPlatform }: Props) => {
         <h3 className="mb-2 font-semibold text-lg px-2">Filter By:</h3>
         <details ref={detailsRef} className="dropdown w-full px-2">
           {" "}
-          {/* ✅ 2. Attach ref */}
           <summary className="btn btn-primary w-full h-12">
             {selectedPlatform?.name || "Platform"}
           </summary>

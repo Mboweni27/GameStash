@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;
@@ -15,7 +15,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
     { value: "-rating", label: "Average Rating" },
   ];
 
-  const detailsRef = useRef<HTMLDetailsElement>(null); // ✅ Add ref
+  const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const currentSortOrder =
     sortOrders.find((order) => order.value === sortOrder) || sortOrders[0];

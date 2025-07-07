@@ -1,7 +1,4 @@
-import React from "react";
-
 const GameCardSkeleton = () => {
-  //might need to change the height in the future h-69
   return (
     <div>
       <figure>
