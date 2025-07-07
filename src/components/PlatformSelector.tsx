@@ -26,7 +26,12 @@ const PlatformSelector = ({ onSelectedPlatform, selectedPlatform }: Props) => {
               <li
                 key={platform.id}
                 onClick={() => {
-                  onSelectedPlatform(platform);
+                  const fixedPlatform =
+                    platform.id === 2
+                      ? { id: 187, name: "PlayStation 5", slug: "playstation5" } // override to PS5
+                      : platform;
+
+                  onSelectedPlatform(fixedPlatform);
                   detailsRef.current?.removeAttribute("open");
                 }}
               >
