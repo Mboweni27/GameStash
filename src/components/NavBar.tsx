@@ -2,8 +2,10 @@ import pic from "../assets/peepo.webp";
 import { ColorModeSwitch } from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-// NavBar.tsx
-const NavBar = () => {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+const NavBar = ({ onSearch }: Props) => {
   return (
     <div className="flex items-center w-full px-4 py-2 gap-4">
       {/* Avatar fixed width */}
@@ -13,7 +15,7 @@ const NavBar = () => {
 
       {/* Search bar fills the remaining space */}
       <div className="flex-grow min-w-0">
-        <SearchInput />
+        <SearchInput onSearch={onSearch} />
       </div>
 
       {/* Theme button fixed width */}

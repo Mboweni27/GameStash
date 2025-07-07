@@ -13,13 +13,16 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   sortOrder: string;
+  searchText: string;
 }
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
   console.log("Current Query:", gameQuery);
   return (
     <>
-      <NavBar />
+      <NavBar
+        onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+      />
       <div className="flex p-5 gap-6">
         <div className="hidden md:block w-1/4">
           <GenreList
