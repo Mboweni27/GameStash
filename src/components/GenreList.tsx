@@ -8,7 +8,6 @@ interface Props {
   selectedGenre: Genre | null;
 }
 const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
-  //this is where ill be adding my spinner, but its not working for some reason
   const { data, isLoading, error } = useGenres();
   if (error) return null;
   if (isLoading) return <span className="loading loading-spinner loading-xl" />;
