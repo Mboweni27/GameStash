@@ -8,7 +8,7 @@ interface Props {
 }
 const PlatformSelector = ({ onSelectedPlatform, selectedPlatform }: Props) => {
   const { data, error } = usePlatforms();
-  const detailsRef = useRef<HTMLDetailsElement>(null); // ✅ 1. Create ref
+  const detailsRef = useRef<HTMLDetailsElement>(null);
   if (error) return null;
 
   return (

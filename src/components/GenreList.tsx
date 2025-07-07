@@ -14,6 +14,9 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   if (isLoading) return <span className="loading loading-spinner loading-xl" />;
   return (
     <>
+      <h1 className="text-2xl font-extrabold text-primary mb-6 tracking-wide uppercase">
+        Genres
+      </h1>
       <ul className="space-y-4">
         {data.map((genre) => (
           <li key={genre.id}>
@@ -26,7 +29,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
               <img
                 src={getCroppedImageUrl(genre.image_background)}
                 alt={genre.name}
-                className="w-10 h-10 object-cover rounded-md"
+                className="w-11 h-11 object-cover rounded-md object-cover"
               />
               <span
                 className={
