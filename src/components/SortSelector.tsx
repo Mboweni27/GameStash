@@ -26,7 +26,6 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
         <h3 className="mb-2 font-semibold text-lg px-2">Order By:</h3>
         <details ref={detailsRef} className="dropdown w-full px-2">
           {" "}
-          {/* ✅ Attach ref */}
           <summary className="btn btn-primary w-full h-12">
             {currentSortOrder.label}
           </summary>
